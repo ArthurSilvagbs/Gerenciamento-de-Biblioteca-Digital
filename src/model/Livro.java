@@ -40,5 +40,20 @@ public class Livro {
         this.autor = autor;
     }
 
+    public String getStatus() {
+        return status;
+    }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("""
+                                TITULO: %s
+                                AUTOR(a): %s
+                                ID: %d""", this.titulo, this.autor, this.idLivro);
+
+    }
 }

@@ -77,6 +77,23 @@ public class Biblioteca {
 
     }
 
+    public boolean retirarLivro(Usuario usuario, Livro livro) {
+        if (!livro.getStatus().equalsIgnoreCase("emprestado")) {
+            livro.setStatus("emprestado");
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isLivroEmprestado(Livro livro) {
+        if (livro.getStatus().equalsIgnoreCase("emprestado")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 
 }
